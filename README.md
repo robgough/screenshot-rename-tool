@@ -70,7 +70,7 @@ live in `~/Documents` (a protected folder). Grant access or renames fail silentl
 - `Sources/screenshot-renamer/main.swift` — CLI, options, watch loop, availability check
 - `Sources/screenshot-renamer/Renamer.swift` — file selection, naming, model call, rename
 - `build.sh` / `install.sh` / `uninstall.sh` — build and launchd wiring
-- `launchd/…plist` — reference copy of the agent definition
+- `launchd/…plist` — placeholder template of the agent definition (install.sh generates the real one)
 - `probe.swift` — quick `swift probe.swift` to check model availability/capabilities
 
 ## License
