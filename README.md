@@ -72,3 +72,7 @@ live in `~/Documents` (a protected folder). Grant access or renames fail silentl
 - `build.sh` / `install.sh` / `uninstall.sh` — build and launchd wiring
 - `launchd/…plist` — reference copy of the agent definition
 - `probe.swift` — quick `swift probe.swift` to check model availability/capabilities
+
+## License
+
+MIT — see [LICENSE](LICENSE).
