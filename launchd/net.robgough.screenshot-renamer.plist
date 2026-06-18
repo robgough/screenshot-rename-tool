@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Reference copy. install.sh generates this into ~/Library/LaunchAgents with your real paths. -->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>net.robgough.screenshot-renamer</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/robgough/code/screenshot-rename-tool/screenshot-renamer</string>
+        <string>--watch</string>
+        <string>--interval</string>
+        <string>4</string>
+    </array>
+
+    <!-- Start at login and keep it running (relaunch if it ever exits). -->
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+
+    <!-- Low priority, throttled I/O — it's a background helper. -->
+    <key>ProcessType</key>
+    <string>Background</string>
+
+    <key>StandardOutPath</key>
+    <string>/Users/robgough/Library/Logs/screenshot-renamer.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/robgough/Library/Logs/screenshot-renamer.log</string>
+</dict>
+</plist>
