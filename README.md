@@ -54,10 +54,14 @@ Options: `--dry-run`, `--once` (default), `--watch`, `--max N`, `--max-pixel N`,
 ## Run it automatically (launchd)
 
 ```sh
-./install.sh        # builds, installs a LaunchAgent, starts watching at login
-./uninstall.sh      # stop and remove it
+./install.sh                 # prompts for the folder to watch, then installs the agent
+./install.sh ~/Desktop       # or pass the folder directly (skips the prompt)
+./uninstall.sh               # stop and remove it
 tail -f ~/Library/Logs/screenshot-renamer.log
 ```
+
+The prompt defaults to your current macOS screenshot location (or the folder a previous
+install was already watching), so you can usually just press Return.
 
 **One-time permission:** a background agent can't show a permission prompt, and your screenshots
 live in `~/Documents` (a protected folder). Grant access or renames fail silently:
